@@ -1,0 +1,4 @@
+CLIENT_ID = 'dGIKr2xfj3Z4JFmbgRSzADvCxN54hoLN4Tunm2uY'
+CLIENT_SECRET = 'HXDGrixEB9yHiTgkyqxamO12KIb5cKlIFpsJI0KxQCdAcKlYfCFKWeFoHP7Jjh91CnNIFimQmz7fpSybNN4iZMkjIFZRLmp6C97C5gvWOpWSfkIyGExCVvNFzcE5TNWM'
+REDIRECT_URI = 'http://localhost:5000/callback'
+SUAP_BASE_URL = 'https://suap.ifrn.edu.br
