@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Cliente SUAP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Cliente SUAP</a>
+            <div class="collapse navbar-collapse">
+                {% if session.get('user') %}
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item me-2 text-white d-flex align-items-center">
+                            <img src="{{ session['user']['foto'] }}" alt="Avatar" class="rounded-circle" width="35" height="35">
+                            <span class="ms-2">{{ session['user']['nome_usual'] }} ({{ session['user']['matricula'] }})</span>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="btn btn-outline-light" href="{{ url_for('logout') }}">Logout</a>
+                        </li>
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
